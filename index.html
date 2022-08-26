@@ -1,38 +1,36 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+  />
 </head>
 
 <body>
-  <h1 id=re>
-    Redirecting...
-  </h1>
+  <h1 id="re">Redirecting...</h1>
   <script>
     function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
+      return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
     async function re() {
-      var h = document.getElementById("re")
-      var i = 0
-      const lis = ["Redirecting.", "Redirecting..", "Redirecting..."]
+      var h = document.getElementById("re");
+      var i = 0;
+      const lis = ["Redirecting.", "Redirecting..", "Redirecting..."];
 
       while (true) {
+        h.textContent = lis[i];
 
-        h.textContent = lis[i]
-        
-        await sleep(500)
-        i++
+        await sleep(500);
+        i++;
         if (i > 2) {
-          i = 0
+          i = 0;
         }
       }
     }
-    async function go(){
-      window.location.replace("https://github.com/thatrandomperson5")
+    async function go() {
+      window.location.replace("https://github.com/thatrandomperson5");
     }
-    go()
-    re()
-    
-    
+    go();
+    re();
   </script>
 </body>
